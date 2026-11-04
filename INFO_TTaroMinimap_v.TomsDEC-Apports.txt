@@ -1,0 +1,315 @@
+================================================================================
+  MINI-MAP TTARO PERSONNALISÉE (TomsDEC) – WORLD OF WARSHIPS
+  Document des apports réels par rapport à la minimap TTaro d’origine
+================================================================================
+
+Auteur du pack personnalisé : TomsDEC
+Version de référence actuelle : MiniMapTTaro_by.TomsDEC_v.20.3
+
+Méthode :
+  Comparaison fichier à fichier (schéma de réglages + interface) entre
+  le mod minimap TTaro d’origine et les versions personnalisées TomsDEC
+  (jusqu’à v.20.3). Ce document ne liste comme « apport » que ce qui
+  n’existait pas dans l’original, ou ce qui a été nettement étendu /
+  corrigé / finalisé.
+
+================================================================================
+PARTIE 0 – DÉJÀ PRÉSENT DANS LA MINIMAP TTARO D’ORIGINE
+          (rappel : ce n’est PAS un ajout TomsDEC)
+================================================================================
+
+La minimap TTaro proposait déjà, entre autres :
+
+  • Cercles de portée nombreux (mer, air, fumée, artillerie, torpilles,
+    AA, radar, hydro, etc.) avec couleur, style de trait, épaisseur,
+    remplissage, modes d’affichage.
+  • Indicateurs de navires : noms, taille de police globale, navires
+    détruits (réglage unique), détection (couleur / affichage), barre
+    de PS (alliés / ennemis, format, largeur, masquer à 100 %).
+  • Ligne de direction ennemie.
+  • Marqueurs de caps (dont mise en évidence des points contestés).
+  • Viseur de base (forme limitée : défaut / + / ×), échelle, couleur.
+  • Marqueurs d’attention / pings (distance, nom joueur, affichage monde…).
+  • Fond de carte (opacité eau, dégradé, flou).
+  • Échelles de carte, position, drag & drop, RPF, torpilles, escadrilles,
+    alertes radar proches, etc.
+  • Comportement AA ennemi « alerte de proximité » lié au pilotage d’avion
+    (escadron) — logique d’origine TTaro.
+
+Ces fonctions font partie de la base d’origine. Elles sont conservées et
+parfois réorganisées ou enrichies dans le pack TomsDEC.
+
+
+================================================================================
+PARTIE A – APPORTS ET EXTENSIONS TOMSDEC (effet en jeu)
+================================================================================
+
+
+--------------------------------------------------------------------------------
+1. COULEURS PERSONNALISÉES DES ÉQUIPES ET DES BOTS
+--------------------------------------------------------------------------------
+
+  • Activer les couleurs d’équipes personnalisées
+    → Remplace les teintes par défaut des icônes selon le camp.
+  • Couleur joueurs alliés / joueurs ennemis
+    → Teinte des joueurs humains sur la minimap. 
+  • Couleur bots alliés / bots ennemis
+    → Teinte distincte pour les bots (séparée des joueurs).
+
+  (Absent de l’original TTaro.)
+
+--------------------------------------------------------------------------------
+2. COULEURS DE GROUPES (MARQUAGE MANUEL)
+--------------------------------------------------------------------------------
+
+  • Activer les couleurs de groupes
+    → Active ou coupe le système de marquage manuel.
+  • Couleur Groupe 1 / Groupe 2
+    → Deux teintes au choix pour repérer divisions ou priorités.
+  • Attribution en combat (mode adaptatif + clic sur l’icône)
+    → 1er clic = Groupe 1, 2e = Groupe 2, 3e = retrait de la marque.
+
+  (Absent de l’original TTaro.)
+
+--------------------------------------------------------------------------------
+3. NOMS ET NAVIRES DÉTRUITS (EXTENSIONS)
+--------------------------------------------------------------------------------
+
+  • Taille du nom du joueur (réglage séparé)
+    → Police du pseudo indépendante de celle du nom de navire.
+      (L’original n’avait qu’une taille de police globale.)
+  • Organisation du menu : nom joueur → taille → nom navire → taille
+    → Lecture plus claire des options.
+  • Navires alliés détruits (Désactiver / Activer / Adaptive)
+    → Réglage dédié aux alliés coulés.
+  • Navires ennemis détruits (séparé, mêmes modes)
+    → L’original n’avait qu’un seul réglage « navires détruits » ;
+      ici alliés et ennemis sont indépendants.
+  • Correction d’affichage des icônes détruites (FINAL-20.2)
+    → Les sélecteurs agissent bien sur les icônes de la minimap.
+
+--------------------------------------------------------------------------------
+4. POINTS DE STRUCTURE (PS) – EXTENSION
+--------------------------------------------------------------------------------
+
+  • Mode couleur de PS
+    → Barre / valeur colorées selon le % de structure restant
+      (plusieurs seuils), en plus du mode d’affichage normal.
+
+  (Les options PS de base — alliés/ennemis, format, largeur, masquer
+  à plein — existaient déjà chez TTaro.)
+
+--------------------------------------------------------------------------------
+5. INDICATEUR DE DÉPLACEMENT (ANNEAU D’ÉTAT)
+--------------------------------------------------------------------------------
+
+  • Anneau autour de l’icône (avance / stop / recul)
+    → État de mouvement lisible d’un coup d’œil.
+  • Taille de l’anneau / opacité de l’anneau
+    → Ajustement visuel.
+  • Pas de réglage de taille de 0,5 (v.20.3)
+    → Curseur plus fin (step 0,5 + décimales), comme la pastille
+      de détection.
+  • Regroupement sous « Indicateur de déplacement »
+    → Menu dédié sous les indicateurs de navires.
+
+  (Absent de l’original TTaro.)
+
+--------------------------------------------------------------------------------
+6. DÉTECTION – EXTENSION
+--------------------------------------------------------------------------------
+
+  • Taille de la pastille de détection
+    → Grosseur de la pastille sous l’icône.
+      (Couleur et affichage de la pastille existaient déjà.)
+
+--------------------------------------------------------------------------------
+7. VISEUR ET VUE CAMÉRA – EXTENSIONS
+--------------------------------------------------------------------------------
+
+  • Formes de viseur supplémentaires
+    → Au-delà des 3 formes d’origine (défaut / + / ×) : losange,
+      cercles, coins, cible, point, triangle, etc. (+ images associées).
+  • Opacité du viseur
+    → Transparence du réticule sur la minimap.
+  • Opacité de la zone de vue (cône caméra)
+    → Transparence du secteur de vision.
+  • Longueur de la zone de vue
+    → Profondeur du cône.
+  • Opacité de la ligne centrale de vue
+    → Trait central plus ou moins visible, indépendamment du cône.
+  • Longueur de la ligne centrale de vue
+    → Longueur de ce trait.
+  • Couleur de la ligne de cap (mon navire uniquement) (v.20.3)
+    → Teinte de TA ligne de direction seulement (selfColor).
+      Ne modifie pas les lignes de cap des ennemis / autres navires
+      (réglage séparé « Couleur (autres navires) » si besoin).
+
+  (Forme de base, échelle et couleur du viseur : déjà TTaro.
+   Ligne de direction des autres navires : base TTaro, libellés FR.)
+
+--------------------------------------------------------------------------------
+8. APPARENCE DE LA CARTE – EXTENSIONS
+--------------------------------------------------------------------------------
+
+  • Section renommée « Réglage apparence »
+    → Ex-intitulé orienté « contraste du fond » côté usage FR.
+  • Afficher le quadrillage (ON / OFF)
+    → Montrer ou cacher la grille A1, A2, … (validé en jeu).
+
+  (Opacité de l’eau, dégradé, flou : déjà TTaro.)
+
+--------------------------------------------------------------------------------
+9. POINTS DE CONTRÔLE – RAPPEL
+--------------------------------------------------------------------------------
+
+  • Mise en évidence des caps contestés
+    → Déjà présent dans TTaro d’origine.
+
+  (Des essais de couleur / transparence / clignotement animé ont pu être
+  explorés ; le cœur « highlight contesté » n’est pas une invention
+  TomsDEC.)
+
+--------------------------------------------------------------------------------
+10. CERCLES DE PORTÉE – EXTENSIONS (sans casser l’existant)
+--------------------------------------------------------------------------------
+
+  • Mode focus (par type de cercle ennemi)
+    → N’afficher certains cercles ennemis que sur la cible concernée /
+      verrouillée, pour limiter la surcharge visuelle.
+    → Libellés FR complets (Radar, Recherche hydroacoustique,
+      Surveillance sous-marine, etc.) + info-bulles (v.20.3).
+    → Bouton Anti-air retiré du Mode focus : l’AA ennemi suit la
+      logique TTaro (affichage en pilotage d’avion), pas le focus cible.
+
+  • AA ennemi : comportement TTaro conservé / rétabli (v.20.2.3 → 20.3)
+    → Cercles d’alerte AA ennemis surtout quand tu pilotes un avion
+      (CV ou hybride en escadron), avec marge (km), style, couleur.
+
+  • Surveillance sous-marine ennemie : affichage réservé au sous-marin
+    (v.20.3)
+    → Comme le principe « AA = avion » : les cercles de surveillance
+      sous-marine ennemis ne s’affichent que si TU joues un sous-marin.
+    → Sélecteur « Avec le type de navire » retiré de cette section
+      (et de Sub – Hydrophone) : la restriction est gérée en dur côté
+      comportement, sans surcharge de menu.
+
+  • Libellés et organisation FR (ex. Mon navire, Sub – Hydrophone,
+    Smoke – Détection après tir, sections Alliés / Ennemis)
+    → Menus plus clairs ; structure enrichie là où l’original était
+      plus compact ou moins explicite en français.
+
+  • Taille des valeurs numériques de portée
+  • Transparence des valeurs numériques de portée
+    → Lisibilité des distances affichées sur la minimap.
+
+  • Contour de secteur = arc + 2 rayons (FINAL-20.2)
+    → Pour les portées en secteur (< 360°) : deux traits ferment le
+      contour de la surface. Avec remplissage à 0, la forme du secteur
+      reste lisible sans surface opaque.
+    → Secteur 360° : pas de rayons (cercle seul).
+
+  (Toute la base des cercles de portée — types, couleurs, traits, fill,
+  modes d’affichage — vient de TTaro et reste le socle.)
+
+--------------------------------------------------------------------------------
+11. PINGS ET ATTENTION – EXTENSIONS
+--------------------------------------------------------------------------------
+
+  • ON / OFF pings d’attention normaux
+  • ON / OFF pings sous-marins
+    → Contrôle séparé de chaque type.
+  • Nom du navire sur les pings
+    → En plus du nom joueur / distance déjà prévus côté base.
+  • Intégration des pings sous-marins (module dédié dans le pack)
+    → Affichage minimap / repères associés aux pings sub.
+  • Durée / lisibilité des pings sur minimap (clignotement plus long,
+    texte moins superposé)
+    → Pings plus repérables en combat.
+
+  (Distance, nom joueur, affichage monde, etc. : déjà TTaro.)
+
+--------------------------------------------------------------------------------
+12. INTERFACE, PACK, DOCUMENTATION, TRADUCTION FR
+--------------------------------------------------------------------------------
+
+  • Info-bulles et libellés FR sur les nouveaux réglages
+  • Version / menus travaillés pour une lecture cohérente
+  • Menus entièrement en français (v.20.3)
+    → Remplacement des clés IDS_… affichées en brut sur install neuve
+      par des libellés français en dur dans le schéma de réglages
+      (sans modifier la logique Unbound).
+  • Fichiers d’installation et notes de version dans le pack
+  • Structure res_mods prête à l’emploi (selon le pack distribué)
+  • Pack COMPLET : minimap + TTaro Mod Config + ModForge + textes
+    → Installable seul sur un WoWs neuf (voir guide dédié).
+
+--------------------------------------------------------------------------------
+13. EXPLORÉ PUIS NON CONSERVÉ (honnêteté du périmètre)
+--------------------------------------------------------------------------------
+
+  • Transparence fine des îles / terrain seul
+  • Clignotement animé des caps contestés
+  • Forcer en permanence l’icône joueur au-dessus de tous les fills
+    de portée (limite de calques)
+  • Réordonnancement global agressif des couches (essais anciens)
+  • Filtre de classes « Avec le type de navire » sur AA / surveillance
+    (remplacé par comportements ciblés : avion / sous-marin)
+
+================================================================================
+PARTIE B – HISTORIQUE DES VERSIONS TOMSDEC (jalons validés)
+================================================================================
+
+  v3 / v7     Bases de travail stables (préservation des portées).
+
+  v9 / v11    Couleurs d’équipes ; repli après essais de calques.
+
+  v16         Version partagée : viseurs enrichis, couleurs, polish UI.
+
+  v17         Travail d’interface / menus / bulles.
+
+  FINAL-20    Regroupement des évolutions majeures (groupes, pings,
+              portées enrichies, viseur / vue, anneau, etc.).
+
+  FINAL-20    Correctif quadrillage ON/OFF (validé en jeu).
+
+  FINAL-20    Menus apparence, noms séparés, détruits alliés/ennemis,
+              mode couleur PS, indicateur de déplacement.
+
+  FINAL-20.2  Référence intermédiaire :
+              • icônes détruites correctement pilotées par les sélecteurs ;
+              • quadrillage ON/OFF conservé ;
+              • contour de secteur (arc + rayons) ;
+              • reste des apports préservés.
+
+ FINAL-20.2.2 → v.20.3 (référence actuelle)
+              • Retrait des sélecteurs « Avec le type de navire » sur
+                Surveillance sous-marine et Sub – Hydrophone ;
+              • Anneau d’état : pas de 0,5 ;
+              • Couleur ligne de cap (mon navire seulement) ;
+              • Mode focus et titres de portées entièrement FR ;
+              • Schema sans multiples IDS_ bruts (traduction FR intégrée) ;
+              • Pack COMPLET à jour.
+
+================================================================================
+PARTIE C – ÉTAT DE RÉFÉRENCE
+================================================================================
+
+  Version stable à conserver :  MiniMapTTaro_by.TomsDEC_v.20.3
+
+  Fichiers :
+    • Solo   : MiniMapTTaro_by.TomsDEC_v.20.3.zip
+    • Pack   : MiniMapTTaro_by.TomsDEC_v.20.3_PACK-COMPLET.zip
+
+  Socle : minimap TTaro d’origine + apports TomsDEC listés en partie A.
+
+  Règle pour la suite :
+    1. partir de MiniMapTTaro_by.TomsDEC_v.20.3 ;
+    2. une fonction explicitement demandée à la fois ;
+    3. retest en jeu avant nouvelle base ;
+    4. ne pas altérer les cercles de portée ni le reste validé hors demande.
+
+================================================================================
+  Fin du document – Apports TomsDEC vs minimap TTaro d’origine
+  (à jour jusqu’à v.20.3)
+================================================================================
