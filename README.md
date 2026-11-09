@@ -2,9 +2,10 @@
 
 ⇒ Le mod est totalement fonctionnelle, cependant après échanges avec TTaro (Andrew) je n'ai pas son accord de publier cette mini-map modifié et amélioré.
 
-
+-----------------------------
 
 AJOUTS OU RETRAVAILLÉ :
+
 1. COULEURS PERSONNALISÉES DES ÉQUIPES ET DES BOTS
 2. COULEURS DE GROUPES (MARQUAGE MANUEL)
 3. NOMS ET NAVIRES DÉTRUITS (EXTENSIONS)
@@ -17,4 +18,3 @@ AJOUTS OU RETRAVAILLÉ :
 10. CERCLES DE PORTÉE – EXTENSIONS (sans casser l’existant)
 11. PINGS ET ATTENTION – EXTENSIONS
 12. INTERFACE, PACK, DOCUMENTATION, TRADUCTION FR
-13. EXPLORÉ PUIS NON CONSERVÉ (honnêteté du périmètre)
